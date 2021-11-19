@@ -10,6 +10,13 @@ public class SaveData : MonoBehaviour
     public void SaveToFile()
     {
         string levels = JsonUtility.ToJson(saveMe);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/Save.json", levels);
+    }
+
+    public void LoadFromFile()
+    {
+        string saveData = System.IO.File.ReadAllText(Application.persistentDataPath + "/Save.json");
+        saveMe = JsonUtility.FromJson<LevelData>(saveData);
     }
 }
 
@@ -24,4 +31,12 @@ public class LevelData
 public class Level
 {
     public bool Lemon1, Lemon2, Lemon3;
+
+
+    public void UpdateLevel(bool a, bool b, bool c)
+    {
+        this.Lemon1 = a;
+        this.Lemon2 = b;
+        this.Lemon3 = c;
+    }
 }
