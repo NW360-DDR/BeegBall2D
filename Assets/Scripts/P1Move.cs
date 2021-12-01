@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class P1Move : MonoBehaviour
 {
     public float speed, jumpPower, brakePower;
     Rigidbody2D rb;
@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xPos = Input.GetAxis("P2Move");
+        xPos = Input.GetAxis("P1Move");
         // If we're in the air, we don't want nearly as much control over ourselves as we do on the ground.
         if (!grounded)
         {
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
         rb.AddForce(Vector2.right * xPos * speed);
 
         // jumping time
-        if (Input.GetButtonDown("P2Jump") && grounded)
+        if (Input.GetButtonDown("P1Jump") && grounded)
         {
             rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             grounded = false;

@@ -35,8 +35,8 @@ public class Level
 
     public void UpdateLevel(bool a, bool b, bool c)
     {
-        this.Lemon1 = a;
-        this.Lemon2 = b;
-        this.Lemon3 = c;
+        this.Lemon1 = a || this.Lemon1;
+        this.Lemon2 = b || this.Lemon2;
+        this.Lemon3 = c || this.Lemon3;
     }
 }

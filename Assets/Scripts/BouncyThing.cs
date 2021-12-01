@@ -13,7 +13,7 @@ public class BouncyThing : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
        var otherRB = other.gameObject.GetComponent<Rigidbody2D>() as Rigidbody2D;
         otherRB.AddForce(bounceDir * strength, ForceMode2D.Impulse);
