@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
         // If we're in the air, we don't want nearly as much control over ourselves as we do on the ground.
         if (!grounded)
         {
-            xPos /= 2;
+            xPos /= 1.3f;
         }
         if (((xPos > 0 && rb.velocity.x < 0) || (xPos < 0 && rb.velocity.x > 0)) && grounded)
         {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6563676349653093725}
   - component: {fileID: 6563676349653093724}
   - component: {fileID: 6563676349653093727}
+  - component: {fileID: 3012093443349979454}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -171,3 +172,15 @@ PolygonCollider2D:
       - {x: 0.060546875, y: -0.265625}
       - {x: 0.095703125, y: -0.26171875}
       - {x: 0.12890625, y: -0.25585938}
+--- !u!114 &3012093443349979454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563676349653093726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68435025403bb2444b9aecb4a2a9e763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
