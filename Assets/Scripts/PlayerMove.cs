@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     Rigidbody2D rb;
     float xPos;
     bool grounded = true;
+    public GameManager GM;
 
     // Start is called before the first frame update
     void Start()
@@ -18,23 +19,26 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xPos = Input.GetAxis("P2Move");
-        // If we're in the air, we don't want nearly as much control over ourselves as we do on the ground.
-        if (!grounded)
+        if (!GM.gameOver)
         {
-            xPos /= 1.3f;
-        }
-        if (((xPos > 0 && rb.velocity.x < 0) || (xPos < 0 && rb.velocity.x > 0)) && grounded)
-        {
-            xPos *= brakePower;
-        }
-        rb.AddForce(Vector2.right * xPos * speed);
+            xPos = Input.GetAxis("P2Move");
+            // If we're in the air, we don't want nearly as much control over ourselves as we do on the ground.
+            if (!grounded)
+            {
+                xPos /= 1.3f;
+            }
+            if (((xPos > 0 && rb.velocity.x < 0) || (xPos < 0 && rb.velocity.x > 0)) && grounded)
+            {
+                xPos *= brakePower;
+            }
+            rb.AddForce(Vector2.right * xPos * speed);
 
-        // jumping time
-        if (Input.GetButtonDown("P2Jump") && grounded)
-        {
-            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            grounded = false;
+            // jumping time
+            if (Input.GetButtonDown("P2Jump") && grounded)
+            {
+                rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+                grounded = false;
+            }
         }
     }
 

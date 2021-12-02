@@ -21,7 +21,7 @@ public class Lemon : MonoBehaviour
         }
         else
         {
-
+            GM.Score(other.gameObject.name);
             Destroy(gameObject);
         }
     }
