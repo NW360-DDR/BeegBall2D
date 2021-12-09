@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6563676349653093727}
   - component: {fileID: 3012093443349979454}
   m_Layer: 0
-  m_Name: Lemon
+  m_Name: LemonVersus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2155,6 +2155,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4854739401252654551, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 72950766}
     - target: {fileID: 5569785353287143410, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2199,16 +2203,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5569785353287143413, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5569785353287143415, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
       propertyPath: m_Name
       value: JimothyPlayer2
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5569785353287143414, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
 --- !u!1001 &2707143064701581292
 PrefabInstance:
@@ -2221,17 +2220,9 @@ PrefabInstance:
       propertyPath: GM
       value: 
       objectReference: {fileID: 72950766}
-    - target: {fileID: 4854739402112764312, guid: a64c4a73e23dd1e4d870ad3c76b798b5, type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4854739402112764313, guid: a64c4a73e23dd1e4d870ad3c76b798b5, type: 3}
       propertyPath: m_Name
       value: Jimothy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4854739402112764315, guid: a64c4a73e23dd1e4d870ad3c76b798b5, type: 3}
-      propertyPath: m_Mass
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4854739402112764316, guid: a64c4a73e23dd1e4d870ad3c76b798b5, type: 3}
       propertyPath: m_RootOrder
@@ -2279,24 +2270,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a64c4a73e23dd1e4d870ad3c76b798b5, type: 3}
---- !u!1 &4854739401252654550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5569785353287143415, guid: 9be32da9a4c9d8741986b8430818e028, type: 3}
-  m_PrefabInstance: {fileID: 1014617816396677665}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4854739401252654551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4854739401252654550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347c90c088e186449bf09777627366c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 10
-  brakePower: 8
-  GM: {fileID: 72950766}

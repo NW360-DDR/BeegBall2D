@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lemon : MonoBehaviour
+public class LemonSolo : MonoBehaviour
 {
-    private GameManager GM;
+    private SoloManager GM;
     // Start is called before the first frame update
     void Start()
     {
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        if (GM == null)
-        {
-            SoloManager GM = GameObject.Find("SoloManager").GetComponent<SoloManager>();
-        }
+        GM = GameObject.Find("SoloManager").GetComponent<SoloManager>();
     }
 
 
@@ -25,7 +21,7 @@ public class Lemon : MonoBehaviour
         }
         else
         {
-            GM.Score(other.gameObject.name);
+            GM.Score();
             Destroy(gameObject);
         }
     }

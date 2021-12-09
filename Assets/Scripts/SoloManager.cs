@@ -1,16 +1,16 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class SoloManager : MonoBehaviour
 {
     public bool gameOver;
-    int p1Score, p2Score;
+    int p1Score;
     float remainingTime = 60.0f;
     public GameObject lemon;
-    public TextMeshProUGUI timer, p1Text, p2Text;
+    public TextMeshProUGUI timer, p1Text;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,25 +25,14 @@ public class GameManager : MonoBehaviour
         if (remainingTime <= 0)
         {
             gameOver = true;
-            timer.transform.position = new Vector2 (Screen.width * 0.5f, Screen.height * 0.5f);
+            timer.transform.position = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
             timer.color = Color.black;
-            if (p1Score > p2Score)
-            {
-                timer.text = "Player 1 Wins!";
-            }
-            else if (p2Score > p1Score)
-            {
-                timer.text = "Player 2 Wins!";
-            }
-            else
-            {
-                timer.text = "You Tied. Congrats.";
-            }
+            timer.text = "Game Over!";
             StartCoroutine("Hesitate");
         }
         else
         {
-            timer.text = Mathf.CeilToInt(remainingTime).ToString();
+            timer.text = string.Format("{0, 0:0.0}", remainingTime);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -63,22 +52,14 @@ public class GameManager : MonoBehaviour
     {
         var x = Random.Range(-11, 11);
         var y = Random.Range(-6, 6);
-        return new Vector2(x,y);
+        return new Vector2(x, y);
     }
 
     // Method used to update the scoreboards.
-    public void Score(string player)
+    public void Score()
     {
-        if (player == "Jimothy")
-        {
-            p1Score += 1;
-            p1Text.text = p1Score.ToString();
-        }
-        else if (player == "JimothyPlayer2")
-        {
-            p2Score += 1;
-            p2Text.text = p2Score.ToString();
-        }
+        p1Score++;
+        p1Text.text = p1Score.ToString();
     }
     IEnumerator Hesitate()
     {
