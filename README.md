@@ -30,7 +30,12 @@ Update Log:
 12/2/2021
  - Realized I forgot about this game entirely and scrambled to make a presentable Alpha, including a scuffed timer, Lemon detection, and actual game loop.
  - Made boilerplate code to implement the Single Player modes I would inevitably need.
+ - Photoshop subscription expired, all future graphics (if any) will now be made with Krita.
  
 12/8/2021
- - Finished up Single PLayer Mode and Got Most of the way through making the Time Trial Mode. Forgot to fix the timer still incrementing once the game ends.
+ - Finished up Single Player Mode and Got Most of the way through making the Time Trial Mode. Forgot to fix the timer still incrementing once the game ends.
   
+12/15/2021
+ - Fixed up the Time Trial timer
+ - Fixed a bug where in Single Player modes, the player would need to use the PLayer 2 Jump key instead of the Player 1 jump key. Good job, Nate.
+ - Made the executive decision that this game sucks and there's no way I can save it at this point, but at the same time it's my fault that it got to this point so... sucks.

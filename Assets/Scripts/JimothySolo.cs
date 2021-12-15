@@ -34,7 +34,7 @@ public class JimothySolo : MonoBehaviour
             rb.AddForce(Vector2.right * xPos * speed);
 
             // jumping time
-            if (Input.GetButtonDown("P2Jump") && grounded)
+            if (Input.GetButtonDown("P1Jump") && grounded)
             {
                 rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
                 grounded = false;

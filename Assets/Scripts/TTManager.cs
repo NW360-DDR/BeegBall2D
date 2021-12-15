@@ -21,8 +21,12 @@ public class TTManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        elapsed += Time.deltaTime;
-        timer.text = string.Format("{0, 0:0.00}", elapsed);
+        if (!gameOver)
+        {
+            elapsed += Time.deltaTime;
+            timer.text = string.Format("{0, 0:0.00}", elapsed);
+        }
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MainMenu");
